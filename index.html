@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="w-[72%] mx-auto pt-[30px]">
+        <h2 class="text-3xl font-bold">Job Application Tracker</h2>
+        <div class="grid grid-cols-3 gap-x-10 mt-2">
+             <div class="bg-gray-50 p-4 rounded-xl">
+                <p>Total</p>
+                <p class="font-bold" id="total">8</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-xl">
+                <p>Interview</p>
+                <p class="text-green-500 font-bold" id="interviewCount">0</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-xl">
+                <p>Rejected</p>
+                <p class="text-red-500 font-bold" id="rejectedCount">0</p>
+            </div>
+            </div>
+    </header>
+    <div class="w-[72%] mx-auto h-px bg-gray-200 my-4"></div>
+    
+   <main class="w-[72%] mx-auto my-5">
+        <h2 class="font-semibold text-2xl pt-5">Available Jobs</h2>
+        <div class="py-5">
+            <button onclick="toggleStyle('all-filter-btn')" class="bg-[#3B82F6] px-5 py-2 cursor-pointer text-white rounded-b-sm" id="all-filter-btn">All</button>
+            <button onclick="toggleStyle('interview-filter-btn')" class="bg-gray-300 px-5 py-2 cursor-pointer rounded-b-sm" id="interview-filter-btn">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" class="bg-gray-300 px-5 py-2 cursor-pointer rounded-b-sm" id="rejected-filter-btn">Rejected</button>
+        </div>
+
+        <!-- filter section -->
+         <section id="filter-section" class="hidden">
+
+         </section>
+
+        <section id="allCards" class="space-y-8">
+        <div class="shadow p-10 flex justify-between">
+            <!-- card-1 -->
+            <div>
+                <div>
+                <h2 class="workName text-2xl font-bold">Mobile First Corp</h2>
+                <p class="exprience text-gray-500">React Native Developer</p>
+                <p class="salary text-gray-500 py-5">Remote•Full-time•$130,000 - $175,000</p>
+                </div>
+                <div>
+                    <p class="status p-2 bg-gray-300 inline">Not Applied</p>
+                    <p class="note py-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                </div>
+                <div class="flex gap-5">
+                    <button class="interview-btn font-bold border border-green-500 p-3 text-green-500 cursor-pointer rounded-[5px] hover:bg-green-500 hover:text-white">Interview</button>
+                    <button class="rejected-btn font-bold border border-red-500 p-3 text-red-500 cursor-pointer rounded-[5px] hover:bg-red-500 hover:text-white">Rejected</button>
+                </div>
+        </div>
+        <div>
+            <i class="fa-regular fa-trash-can" class="delete-btn"></i>
+        </div>
+        </div>
+        <div class="shadow p-10 flex justify-between">
+            <!-- card-1 -->
+            <div>
+                <div>
+                <h2 class="workName text-2xl font-bold">Mobile First Corp</h2>
+                <p class="exprience text-gray-500">React Native Developer</p>
+                <p class="salary text-gray-500 py-5">Remote•Full-time•$130,000 - $175,000</p>
+                </div>
+                <div>
+                    <p class="status p-2 bg-gray-300 inline">Not Applied</p>
+                    <p class="note py-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                </div>
+                <div class="flex gap-5">
+                    <button class="interview-btn font-bold border border-green-500 p-3 text-green-500 cursor-pointer rounded-[5px] hover:bg-green-500 hover:text-white">Interview</button>
+                    <button class="rejected-btn font-bold border border-red-500 p-3 text-red-500 cursor-pointer rounded-[5px] hover:bg-red-500 hover:text-white">Rejected</button>
+                </div>
+        </div>
+        <div>
+            <i class="fa-regular fa-trash-can" class="delete-btn"></i>
+        </div>
+        </div>
+    </section>
+   </main>
+    <script src="/script.js"></script>
+</body>
+</html>
